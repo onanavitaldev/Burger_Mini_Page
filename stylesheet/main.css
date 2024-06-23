@@ -1,0 +1,88 @@
+/*
+    By ONANA vital
+    With SCSS
+*/
+*::-moz-selection {
+  background-color: #000;
+  color: #fff;
+}
+*::selection {
+  background-color: #d4cb1c;
+  color: #fff;
+}
+
+/* Variables */
+:root {
+  --font: Figtree, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font);
+  background: radial-gradient(circle at 50% 10%, #1a1a1a, black 50%);
+  background-size: cover;
+}
+
+#nav-left 
+{
+    animation: fadeInLeft 0.8s;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.971) 60%,
+    rgba(0, 0, 0, 0.848));
+    top: 0.4px;
+    left: 0;
+    width: 1500px;
+    border-right: none;
+    height: 1000px;
+    padding: 8px 14px;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.1s ease-in 0s;
+    display: none;
+}
+#nav-left #link_ li 
+{
+    color: #fff;
+    font-size: 28px;
+    margin: 25px 10px;
+    padding: 0.9em;
+    width: 55px;
+    height: 55px;
+    margin-right: 60px;
+    text-align: center;
+    background-color: var(--main-bg);
+    border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+}
+#nav-left #link_ li:hover 
+{
+    color: #d4cb1c;
+    background-color: var(--main-bg-dark);
+    transform: scale(1.1);
+}
+
+main section {
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(12px);
+}
+main section img
+{
+  animation: dance 2s linear infinite;
+}
+@keyframes dance 
+{
+  0%,100%
+  {
+    transform: translateY(-10px);
+  }
+  100%,50%
+  {
+    transform: translateY(5px);
+  }
+  100%
+  {
+    transform: translateY(10px);
+  }
+}
+
+/* Media Queries */
